@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c828d49a6306e94d8ac8170c45fc1b9, type: 3}
+  m_Name: ZoneLibrary
+  m_EditorClassIdentifier: 
+  Zones:
+  - Name: Chillout Zone
+    Id: 987061f0-3299-4743-9e06-58bc51e586e9
+  - Name: Pool Zone
+    Id: d5962ffc-d79c-4494-9db2-753153ec9c4e
+  - Name: Garden Zone
+    Id: 258471f0-b96f-4486-9bab-ac05680252b0
+  - Name: House Zone
+    Id: dcc44a35-a1ed-40cb-99af-65903f9361b3
+  - Name: Balcony Zone
+    Id: def6f6f4-9a68-48fa-8047-b32da3f4dae4
+  - Name: Parking Zone
+    Id: 3eeda47f-315e-41f4-8f5a-b69cc191e6a3
