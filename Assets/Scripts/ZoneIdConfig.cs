@@ -9,7 +9,7 @@ public class ZoneIdConfig : MonoBehaviour
     private ZoneLibrary _zoneLibrary;
     private Zone _zone;
 
-    private void Start()
+    private void Awake()
     {
         _zone = GetComponent<Zone>();
         _zoneLibrary = Resources.Load<ZoneLibrary>("ZoneLibrary");
