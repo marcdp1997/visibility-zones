@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.03
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -512,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.96
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -542,9 +542,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2430946249253480349, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
+      propertyPath: NeighbourIds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430946249253480349, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
+      propertyPath: NeighbourIds.Array.data[0]
+      value: d5962ffc-d79c-4494-9db2-753153ec9c4e
+      objectReference: {fileID: 0}
     - target: {fileID: 4929636547915198910, guid: da4ac172a1a7eea46a060091817cceb0, type: 3}
       propertyPath: m_Radius
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -605,7 +613,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 974793348596122814, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: m_Name
-      value: Balcony Zone
+      value: Garden Zone
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,7 +625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.92
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 1361651239419958847, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -653,15 +661,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: NeighbourIds.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: NeighbourIds.Array.data[0]
-      value: d5962ffc-d79c-4494-9db2-753153ec9c4e
+      value: 987061f0-3299-4743-9e06-58bc51e586e9
       objectReference: {fileID: 0}
     - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: NeighbourIds.Array.data[1]
-      value: 258471f0-b96f-4486-9bab-ac05680252b0
+      value: d5962ffc-d79c-4494-9db2-753153ec9c4e
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
+      propertyPath: NeighbourIds.Array.data[2]
+      value: dcc44a35-a1ed-40cb-99af-65903f9361b3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
+      propertyPath: NeighbourIds.Array.data[3]
+      value: 3eeda47f-315e-41f4-8f5a-b69cc191e6a3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882159328078321889, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
+      propertyPath: m_Size.z
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -723,6 +743,14 @@ PrefabInstance:
     - target: {fileID: 2430946249253480349, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
       propertyPath: Id
       value: dcc44a35-a1ed-40cb-99af-65903f9361b3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882159328078321889, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
+      propertyPath: m_Size.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882159328078321889, guid: 15741c3469a1263459ea1a4337a20f6f, type: 3}
+      propertyPath: m_Size.z
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
