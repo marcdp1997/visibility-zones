@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,7 +10,6 @@ public class ZoneEditor : Editor
     private SerializedProperty _neighboursIdsProperty;
     private ZoneLibrary _zoneLibrary;
 
-    private bool _showNeighbours;
     private string _prevName;
 
     private void OnEnable()
@@ -24,7 +25,16 @@ public class ZoneEditor : Editor
     {
         serializedObject.Update();
 
-        EditorGUILayout.LabelField("UNIQUE ID");
+        CreateUniqueIdProperty();
+        EditorGUILayout.Space(10);
+        CreateNeighbourProperty();
+
+        serializedObject.ApplyModifiedProperties();
+    }
+
+    private void CreateUniqueIdProperty()
+    {
+        EditorGUILayout.LabelField("Unique ID", EditorStyles.boldLabel);
         EditorGUILayout.LabelField(_idProperty.stringValue.ToString());
 
         if (_prevName != target.name)
@@ -32,15 +42,16 @@ public class ZoneEditor : Editor
             _zoneLibrary.ChangeZoneName(_idProperty.stringValue, target.name);
             _prevName = target.name;
         }
+    }
 
-        EditorGUILayout.Space(10);
+    private void CreateNeighbourProperty()
+    {
+        EditorGUILayout.LabelField("Neighbours", EditorStyles.boldLabel);
 
-        EditorGUILayout.LabelField("NEIGHBOURS");
-
-        string[] zoneNames = new string[_zoneLibrary.Zones.Count];
+        List<string> zoneNames = new List<string>();
         for (int i = 0; i < _zoneLibrary.Zones.Count; i++)
             if (_zoneLibrary.Zones[i].Id != _idProperty.stringValue)
-                zoneNames[i] = _zoneLibrary.Zones[i].Name;
+                zoneNames.Add(_zoneLibrary.Zones[i].Name);
 
         for (int i = 0; i < _neighboursIdsProperty.arraySize; i++)
         {
@@ -48,7 +59,7 @@ public class ZoneEditor : Editor
 
             if (selectedZoneIndex != -1)
             {
-                int newSelectedZoneIndex = EditorGUILayout.Popup(selectedZoneIndex, zoneNames);
+                int newSelectedZoneIndex = EditorGUILayout.Popup(selectedZoneIndex, zoneNames.ToArray());
                 _neighboursIdsProperty.GetArrayElementAtIndex(i).stringValue = _zoneLibrary.Zones[newSelectedZoneIndex].Id;
             }
             else _neighboursIdsProperty.DeleteArrayElementAtIndex(i);
@@ -65,7 +76,5 @@ public class ZoneEditor : Editor
         {
             _neighboursIdsProperty.DeleteArrayElementAtIndex(_neighboursIdsProperty.arraySize - 1);
         }
-
-        serializedObject.ApplyModifiedProperties();
     }
 }

@@ -6,7 +6,6 @@ using UnityEngine;
 public class Zone : MonoBehaviour
 {
     [SerializeField] public string Id;
-    [SerializeField] public string Name;
     [SerializeField] private List<string> NeighbourIds = new List<string>();
 
     private List<Zone> _neighbourZones;
