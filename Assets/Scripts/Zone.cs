@@ -18,17 +18,19 @@ public class Zone : MonoBehaviour
     }
 
     private void OnDrawGizmos()
-    {
-        _collider = GetComponent<Collider>();
-        Gizmos.color = new Vector4(0.5f, 0.5f, 0.5f, 0.7f);
+    {     
+        if (TryGetComponent(out _collider))
+        {
+            Gizmos.color = Color.grey;
 
-        if (_collider is BoxCollider boxCollider)
-        {
-            DrawBoxColliderGizmo(boxCollider);
-        }
-        else if (_collider is SphereCollider sphereCollider)
-        {
-            DrawSphereColliderGizmo(sphereCollider);
+            if (_collider is BoxCollider boxCollider)
+            {
+                DrawBoxColliderGizmo(boxCollider);
+            }
+            else if (_collider is SphereCollider sphereCollider)
+            {
+                DrawSphereColliderGizmo(sphereCollider);
+            }
         }
     }
 
